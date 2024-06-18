@@ -1,0 +1,1 @@
+const String assetsPath = "assets/data/dummyData.json";
