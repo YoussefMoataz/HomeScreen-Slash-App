@@ -1,16 +1,20 @@
+import 'package:homescreen_slash_app/core/di/di.dart';
 import 'package:homescreen_slash_app/core/resources/data_state.dart';
-import 'package:homescreen_slash_app/features/homescreen/data/data_sources/remote/products_api_service.dart';
 import 'package:homescreen_slash_app/features/homescreen/data/models/products_list_model.dart';
 import 'package:homescreen_slash_app/features/homescreen/domain/repositories/products_repository.dart';
 
-class ProductsRepositoryImpl implements ProductsRepository {
-  final ProductsApiService _productsApiService;
+import '../data_sources/remote/products_api_service_remote.dart';
 
-  ProductsRepositoryImpl(this._productsApiService);
+class ProductsRepositoryImpl implements ProductsRepository {
+  late final ProductsApiServiceRemote _productsApiServiceRemote;
+
+  ProductsRepositoryImpl({ProductsApiServiceRemote? productsApiServiceRemote}){
+    this._productsApiServiceRemote = productsApiServiceRemote ?? getIt.get<ProductsApiServiceRemote>();
+  }
 
   @override
   Future<DataState<ProductsListModel>> getProducts() async {
-    final response = await _productsApiService.getProducts();
+    final response = await _productsApiServiceRemote.getProducts();
 
     if (response == null) {
       return DataFailed("failed to load data");

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:homescreen_slash_app/core/di/di.dart';
 
-void main() {
+Future<void> main() async {
+  setup();
   runApp(const MyApp());
 }
 

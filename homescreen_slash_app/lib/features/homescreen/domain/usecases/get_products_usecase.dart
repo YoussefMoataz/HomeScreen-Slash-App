@@ -1,3 +1,4 @@
+import 'package:homescreen_slash_app/core/di/di.dart';
 import 'package:homescreen_slash_app/core/resources/data_state.dart';
 import 'package:homescreen_slash_app/core/usecases/usecase.dart';
 import 'package:homescreen_slash_app/features/homescreen/domain/entities/products_list_entity.dart';
@@ -5,9 +6,11 @@ import 'package:homescreen_slash_app/features/homescreen/domain/repositories/pro
 
 class GetProductsUseCase
     implements UseCase<DataState<ProductsListEntity>, void> {
-  final ProductsRepository _productsRepository;
+  late final ProductsRepository _productsRepository;
 
-  GetProductsUseCase(this._productsRepository);
+  GetProductsUseCase({ProductsRepository? productsRepository}){
+    this._productsRepository = productsRepository ?? getIt.get<ProductsRepository>();
+  }
 
   @override
   Future<DataState<ProductsListEntity>> call({void params}) async {
