@@ -40,8 +40,11 @@ class ProductsPage extends StatelessWidget {
                     ),
                   ],
                 );
+              } else if (state is ProductsError) {
+                return Text("Failed to load data");
+              } else {
+                return CircularProgressIndicator();
               }
-              return CircularProgressIndicator();
             },
           ),
         ),

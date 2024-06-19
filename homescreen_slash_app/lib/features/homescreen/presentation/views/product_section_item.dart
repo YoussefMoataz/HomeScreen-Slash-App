@@ -25,7 +25,8 @@ class ProductSectionItem extends StatelessWidget {
                   // Image.asset(product.imageUrl!),
                   Container(
                     clipBehavior: Clip.hardEdge,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(10)),
                     child: Image.asset(
                       "assets/images/best_seller_1.png",
                       width: sectionProductItemWidth,
@@ -33,7 +34,7 @@ class ProductSectionItem extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  Icon(CupertinoIcons.heart),
+                  const Icon(CupertinoIcons.heart),
                 ],
               ),
             ),

@@ -8,8 +8,9 @@ class GetProductsUseCase
     implements UseCase<DataState<ProductsListEntity>, void> {
   late final ProductsRepository _productsRepository;
 
-  GetProductsUseCase({ProductsRepository? productsRepository}){
-    this._productsRepository = productsRepository ?? getIt.get<ProductsRepository>();
+  GetProductsUseCase({ProductsRepository? productsRepository}) {
+    this._productsRepository =
+        productsRepository ?? getIt.get<ProductsRepository>();
   }
 
   @override

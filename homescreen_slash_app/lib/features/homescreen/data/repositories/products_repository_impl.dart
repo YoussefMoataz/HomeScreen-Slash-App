@@ -8,8 +8,9 @@ import '../data_sources/remote/products_api_service_remote.dart';
 class ProductsRepositoryImpl implements ProductsRepository {
   late final ProductsApiServiceRemote _productsApiServiceRemote;
 
-  ProductsRepositoryImpl({ProductsApiServiceRemote? productsApiServiceRemote}){
-    this._productsApiServiceRemote = productsApiServiceRemote ?? getIt.get<ProductsApiServiceRemote>();
+  ProductsRepositoryImpl({ProductsApiServiceRemote? productsApiServiceRemote}) {
+    this._productsApiServiceRemote =
+        productsApiServiceRemote ?? getIt.get<ProductsApiServiceRemote>();
   }
 
   @override
