@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:homescreen_slash_app/core/di/di.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/bloc/products_cubit.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/pages/products_page.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/views/products_section.dart';
 
 Future<void> main() async {
   setup();
@@ -25,11 +27,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: Scaffold(
-          body: SafeArea(
-            child: Text("Youssef"),
-          ),
-        ),
+        home: ProductsPage(),
       ),
     );
   }

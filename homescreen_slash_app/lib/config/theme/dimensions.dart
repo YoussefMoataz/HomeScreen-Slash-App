@@ -1,0 +1,1 @@
+const double sectionProductItemWidth = 180;

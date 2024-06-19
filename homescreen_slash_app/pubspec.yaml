@@ -93,3 +93,4 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - assets/data/dummyData.json
+    - assets/images/best_seller_1.png
