@@ -3,10 +3,12 @@ import 'package:homescreen_slash_app/features/homescreen/data/data_sources/remot
 import 'package:homescreen_slash_app/features/homescreen/data/data_sources/remote/products_api_service_remote_impl.dart';
 import 'package:homescreen_slash_app/features/homescreen/data/repositories/products_repository_impl.dart';
 import 'package:homescreen_slash_app/features/homescreen/domain/repositories/products_repository.dart';
+import 'package:homescreen_slash_app/features/homescreen/domain/usecases/get_products_usecase.dart';
 
 final GetIt getIt = GetIt.instance;
 
 void setup() {
   getIt.registerSingleton<ProductsApiServiceRemote>(ProductsApiServiceRemoteImpl());
   getIt.registerSingleton<ProductsRepository>(ProductsRepositoryImpl());
+  getIt.registerSingleton<GetProductsUseCase>(GetProductsUseCase());
 }
