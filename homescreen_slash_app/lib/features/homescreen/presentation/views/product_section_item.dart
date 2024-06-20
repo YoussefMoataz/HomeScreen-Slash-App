@@ -7,8 +7,9 @@ import '../../../../config/theme/dimensions.dart';
 
 class ProductSectionItem extends StatelessWidget {
   final ProductEntity product;
+  final VoidCallback onProductClicked;
 
-  const ProductSectionItem({super.key, required this.product});
+  const ProductSectionItem({super.key, required this.product, required this.onProductClicked});
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +28,14 @@ class ProductSectionItem extends StatelessWidget {
                     clipBehavior: Clip.hardEdge,
                     decoration:
                         BoxDecoration(borderRadius: BorderRadius.circular(10)),
-                    child: Image.asset(
-                      "assets/images/best_seller_1.png",
-                      width: sectionProductItemWidth,
-                      height: sectionProductItemWidth,
-                      fit: BoxFit.cover,
+                    child: GestureDetector(
+                      onTap: onProductClicked,
+                      child: Image.asset(
+                        "assets/images/best_seller_1.png",
+                        width: sectionProductItemWidth,
+                        height: sectionProductItemWidth,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   Positioned(
@@ -44,7 +48,7 @@ class ProductSectionItem extends StatelessWidget {
                       ),
                       child: GestureDetector(
                         onTap: () {
-                          print("add to cart clicked");
+                          print("favourite clicked");
                         },
                         child: const Padding(
                           padding: EdgeInsets.all(4.0),

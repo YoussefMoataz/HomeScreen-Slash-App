@@ -34,7 +34,12 @@ class ProductsSection extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: products.length,
               itemBuilder: (context, index) {
-                return ProductSectionItem(product: products[index]);
+                return ProductSectionItem(
+                  product: products[index],
+                  onProductClicked: () {
+                    print("Section: $sectionName - Product index $index clicked");
+                  },
+                );
               },
             ),
           ),
