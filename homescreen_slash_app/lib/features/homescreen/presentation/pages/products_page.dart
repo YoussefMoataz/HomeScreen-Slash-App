@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/bloc/categories/categories_cubit.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/views/categories_section.dart';
 
-import '../bloc/products_cubit.dart';
+import '../bloc/products/products_cubit.dart';
 import '../views/products_section.dart';
 
 class ProductsPage extends StatelessWidget {
@@ -15,11 +16,21 @@ class ProductsPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              CategoriesSection(
-                sectionName: "Categories",
-                categories: [],
-                onSeeAllClicked: () {
-                  print("Categories: see all clicked");
+              BlocBuilder<CategoriesCubit, CategoriesState>(
+                builder: (context, state) {
+                  if (state is CategoriesDone) {
+                    return CategoriesSection(
+                      sectionName: "Categories",
+                      categories: state.categories!,
+                      onSeeAllClicked: () {
+                        print("Categories: see all clicked");
+                      },
+                    );
+                  } else if (state is CategoriesDone) {
+                    return Text("Failed to load data");
+                  } else {
+                    return CircularProgressIndicator();
+                  }
                 },
               ),
               BlocBuilder<ProductsCubit, ProductsState>(

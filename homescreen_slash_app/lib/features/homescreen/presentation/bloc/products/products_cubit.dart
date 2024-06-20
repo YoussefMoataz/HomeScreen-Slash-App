@@ -4,7 +4,7 @@ import 'package:homescreen_slash_app/core/di/di.dart';
 import 'package:homescreen_slash_app/core/resources/data_state.dart';
 import 'package:homescreen_slash_app/features/homescreen/domain/entities/products_list_entity.dart';
 
-import '../../domain/usecases/get_products_usecase.dart';
+import '../../../domain/usecases/get_products_usecase.dart';
 
 part 'products_state.dart';
 
