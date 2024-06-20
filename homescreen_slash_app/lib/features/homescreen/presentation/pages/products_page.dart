@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/views/categories_view.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/views/products_view.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/search_box.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/top_bar.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
@@ -21,6 +22,7 @@ class ProductsPage extends StatelessWidget {
               child: Column(
                 children: [
                   TopBar(),
+                  SearchBox(),
                   CategoriesView(),
                   ProductsView(),
                 ],
