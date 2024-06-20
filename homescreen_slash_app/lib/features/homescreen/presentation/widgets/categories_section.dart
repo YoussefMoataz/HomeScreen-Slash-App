@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:homescreen_slash_app/features/homescreen/domain/entities/category_entity.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/section_header.dart';
 
+import '../../../../config/theme/dimensions.dart';
 import 'category_section_item.dart';
 
 class CategoriesSection extends StatelessWidget {
@@ -32,7 +33,7 @@ class CategoriesSection extends StatelessWidget {
           SizedBox(height: 10),
           Expanded(
             child: ListView.builder(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: EdgeInsets.symmetric(horizontal: defaultPadding - defaultListItemPadding),
               scrollDirection: Axis.horizontal,
               itemCount: categories.length,
               itemBuilder: (context, index) {

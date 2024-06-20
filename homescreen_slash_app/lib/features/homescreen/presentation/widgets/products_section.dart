@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:homescreen_slash_app/config/theme/dimensions.dart';
 import 'package:homescreen_slash_app/features/homescreen/domain/entities/product_entity.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/product_section_item.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/section_header.dart';
@@ -28,10 +29,10 @@ class ProductsSection extends StatelessWidget {
               onSeeAllClicked: onSeeAllClicked,
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 10),
           Expanded(
             child: ListView.builder(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: EdgeInsets.symmetric(horizontal: defaultPadding - defaultListItemPadding),
               scrollDirection: Axis.horizontal,
               itemCount: products.length,
               itemBuilder: (context, index) {

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 import '../../../../config/theme/colors.dart';
+import '../../../../config/theme/dimensions.dart';
 import '../../../../config/theme/text_styles.dart';
 
 class SectionHeader extends StatelessWidget {
@@ -17,16 +18,14 @@ class SectionHeader extends StatelessWidget {
       alignment: Alignment.center,
       children: [
         Positioned(
-          top: 10,
-          left: 18,
+          left: defaultPadding,
           child: Text(
             sectionName,
             style: sectionNameTextStyle,
           ),
         ),
         Positioned(
-          top: 14,
-          right: 18,
+          right: defaultPadding,
           child: Row(
             children: [
               const Text(
