@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:homescreen_slash_app/features/homescreen/domain/entities/product_entity.dart';
-import 'package:homescreen_slash_app/features/homescreen/presentation/views/product_section_item.dart';
-import 'package:homescreen_slash_app/features/homescreen/presentation/views/section_header.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/product_section_item.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/section_header.dart';
 
 class ProductsSection extends StatelessWidget {
   final String sectionName;
@@ -37,7 +37,8 @@ class ProductsSection extends StatelessWidget {
                 return ProductSectionItem(
                   product: products[index],
                   onProductClicked: () {
-                    print("Section: $sectionName - Product index $index clicked");
+                    print(
+                        "Section: $sectionName - Product index $index clicked");
                   },
                 );
               },

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:homescreen_slash_app/features/homescreen/domain/entities/category_entity.dart';
-import 'package:homescreen_slash_app/features/homescreen/presentation/views/category_section_item.dart';
-import 'package:homescreen_slash_app/features/homescreen/presentation/views/section_header.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/section_header.dart';
+
+import 'category_section_item.dart';
 
 class CategoriesSection extends StatelessWidget {
   final String sectionName;
