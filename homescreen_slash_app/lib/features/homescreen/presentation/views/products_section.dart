@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:homescreen_slash_app/config/theme/text_styles.dart';
 import 'package:homescreen_slash_app/features/homescreen/domain/entities/product_entity.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/views/product_section_item.dart';
-import 'package:homescreen_slash_app/features/homescreen/presentation/views/products_section_see_all.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/views/section_header.dart';
 
 class ProductsSection extends StatelessWidget {
   final String sectionName;
@@ -24,26 +23,9 @@ class ProductsSection extends StatelessWidget {
         children: [
           SizedBox(
             height: 40,
-            child: Stack(
-              fit: StackFit.expand,
-              alignment: Alignment.center,
-              children: [
-                Positioned(
-                  top: 10,
-                  left: 10,
-                  child: Text(
-                    sectionName,
-                    style: sectionNameTextStyle,
-                  ),
-                ),
-                Positioned(
-                  top: 14,
-                  right: 10,
-                  child: ProductsSectionSeeAll(
-                    onSeeAllClicked: onSeeAllClicked,
-                  ),
-                ),
-              ],
+            child: SectionHeader(
+              sectionName: sectionName,
+              onSeeAllClicked: onSeeAllClicked,
             ),
           ),
           SizedBox(height: 20),

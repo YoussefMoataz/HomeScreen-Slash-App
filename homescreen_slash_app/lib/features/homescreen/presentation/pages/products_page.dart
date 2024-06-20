@@ -35,7 +35,8 @@ class ProductsPage extends StatelessWidget {
                         ),
                         ProductsSection(
                           sectionName: "Recommended For You",
-                          products: state.productsListEntity!.recommendedForYou!,
+                          products:
+                              state.productsListEntity!.recommendedForYou!,
                           onSeeAllClicked: () {
                             print("Recommended For You: see all clicked");
                           },
