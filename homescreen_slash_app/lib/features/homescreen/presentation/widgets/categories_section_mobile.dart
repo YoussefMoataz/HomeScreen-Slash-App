@@ -5,12 +5,12 @@ import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/se
 import '../../../../config/theme/dimensions.dart';
 import 'category_section_item.dart';
 
-class CategoriesSection extends StatelessWidget {
+class CategoriesSectionMobile extends StatelessWidget {
   final String sectionName;
   late final List<CategoryEntity> categories;
   final VoidCallback onSeeAllClicked;
 
-  CategoriesSection(
+  CategoriesSectionMobile(
       {super.key,
       required this.sectionName,
       required this.categories,

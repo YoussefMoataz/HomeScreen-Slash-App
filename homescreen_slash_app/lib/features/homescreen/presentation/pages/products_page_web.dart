@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:homescreen_slash_app/features/homescreen/presentation/views/categories_view.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/views/categories_view_mobile.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/views/categories_view_web.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/views/offers_view.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/views/products_view_web.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/search_box.dart';
@@ -12,8 +13,7 @@ class ProductsPageWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Expanded(
-        child: Row(
+      body: Row(
           children: [
             NavigationRail(
               labelType: NavigationRailLabelType.all,
@@ -36,28 +36,28 @@ class ProductsPageWeb extends StatelessWidget {
                   Row(
                     children: [
                       Expanded(flex: 2, child: TopBar()),
-                      Expanded(flex: 1, child: SearchBox()),
                     ],
                   ),
                   Expanded(
                     child: Row(
                       children: [
                         Expanded(
-                          flex: 3,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8),
-                            child: ProductsViewWeb(),
-                          ),
-                        ),
-                        Expanded(
                           flex: 1,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
+                              SearchBox(),
                               OffersView(),
-                              CategoriesView(),
+                              CategoriesViewWeb(),
                             ],
                           ),
+                        ),
+                        Expanded(
+                          flex: 3,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 8),
+                            child: ProductsViewWeb(),
+                          )
                         ),
                       ],
                     ),
@@ -67,7 +67,6 @@ class ProductsPageWeb extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }

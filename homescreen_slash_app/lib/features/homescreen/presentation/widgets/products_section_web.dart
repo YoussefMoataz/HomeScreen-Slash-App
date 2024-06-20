@@ -33,8 +33,9 @@ class ProductsSectionWeb extends StatelessWidget {
           SizedBox(height: 10),
           Expanded(
             child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, childAspectRatio: 0.7),
+              // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              //     crossAxisCount: 2, childAspectRatio: 0.8),
+              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 300, childAspectRatio: 0.7),
               shrinkWrap: true,
               padding: EdgeInsets.symmetric(
                   horizontal: defaultPadding - defaultListItemPadding),
