@@ -11,7 +11,7 @@ class SearchBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:
-          const EdgeInsets.symmetric(horizontal: defaultPadding, vertical: 8),
+          const EdgeInsets.symmetric(horizontal: defaultPadding, vertical: 10),
       child: Row(
         children: [
           Expanded(
