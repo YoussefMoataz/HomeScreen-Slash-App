@@ -12,40 +12,44 @@ class ProductsPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: BlocBuilder<ProductsCubit, ProductsState>(
-            builder: (context, state) {
-              if (state is ProductsDone) {
-                return Column(
-                  children: [
-                    ProductsSection(
-                      sectionName: "Best Selling",
-                      products: state.productsListEntity!.bestSelling!,
-                      onSeeAllClicked: () {
-                        print("Best Selling: see all clicked");
-                      },
-                    ),
-                    ProductsSection(
-                      sectionName: "New Arrival",
-                      products: state.productsListEntity!.newArrival!,
-                      onSeeAllClicked: () {
-                        print("New Arrival: see all clicked");
-                      },
-                    ),
-                    ProductsSection(
-                      sectionName: "Recommended For You",
-                      products: state.productsListEntity!.recommendedForYou!,
-                      onSeeAllClicked: () {
-                        print("Recommended For You: see all clicked");
-                      },
-                    ),
-                  ],
-                );
-              } else if (state is ProductsError) {
-                return Text("Failed to load data");
-              } else {
-                return CircularProgressIndicator();
-              }
-            },
+          child: Column(
+            children: [
+              BlocBuilder<ProductsCubit, ProductsState>(
+                builder: (context, state) {
+                  if (state is ProductsDone) {
+                    return Column(
+                      children: [
+                        ProductsSection(
+                          sectionName: "Best Selling",
+                          products: state.productsListEntity!.bestSelling!,
+                          onSeeAllClicked: () {
+                            print("Best Selling: see all clicked");
+                          },
+                        ),
+                        ProductsSection(
+                          sectionName: "New Arrival",
+                          products: state.productsListEntity!.newArrival!,
+                          onSeeAllClicked: () {
+                            print("New Arrival: see all clicked");
+                          },
+                        ),
+                        ProductsSection(
+                          sectionName: "Recommended For You",
+                          products: state.productsListEntity!.recommendedForYou!,
+                          onSeeAllClicked: () {
+                            print("Recommended For You: see all clicked");
+                          },
+                        ),
+                      ],
+                    );
+                  } else if (state is ProductsError) {
+                    return Text("Failed to load data");
+                  } else {
+                    return CircularProgressIndicator();
+                  }
+                },
+              ),
+            ],
           ),
         ),
       ),

@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:homescreen_slash_app/config/theme/colors.dart';
 import 'package:homescreen_slash_app/config/theme/text_styles.dart';
 import 'package:homescreen_slash_app/features/homescreen/domain/entities/product_entity.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/views/product_section_item.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/views/products_section_see_all.dart';
 
 class ProductsSection extends StatelessWidget {
   final String sectionName;
@@ -39,32 +39,8 @@ class ProductsSection extends StatelessWidget {
                 Positioned(
                   top: 14,
                   right: 10,
-                  child: Row(
-                    children: [
-                      const Text(
-                        "See all",
-                        style: sectionSeeAllTextStyle,
-                      ),
-                      const SizedBox(
-                        width: 6,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: sectionSeeAllIconColor,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: GestureDetector(
-                          onTap: onSeeAllClicked,
-                          child: const Padding(
-                            padding: EdgeInsets.all(2.0),
-                            child: Icon(
-                              CupertinoIcons.right_chevron,
-                              size: 20,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
+                  child: ProductsSectionSeeAll(
+                    onSeeAllClicked: onSeeAllClicked,
                   ),
                 ),
               ],
