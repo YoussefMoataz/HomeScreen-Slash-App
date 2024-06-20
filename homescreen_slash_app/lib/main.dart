@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:homescreen_slash_app/config/routes/routing.dart';
 import 'package:homescreen_slash_app/core/di/di.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/bloc/categories/categories_cubit.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/bloc/offers/offers_cubit.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/bloc/products/products_cubit.dart';
 
 Future<void> main() async {
@@ -22,6 +23,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => CategoriesCubit(),
+        ),
+        BlocProvider(
+          create: (context) => OffersCubit(),
         ),
       ],
       child: MaterialApp.router(
