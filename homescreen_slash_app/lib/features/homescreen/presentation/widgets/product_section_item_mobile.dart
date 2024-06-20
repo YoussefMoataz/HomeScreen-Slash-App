@@ -5,17 +5,17 @@ import 'package:homescreen_slash_app/features/homescreen/domain/entities/product
 import '../../../../config/theme/colors.dart';
 import '../../../../config/theme/dimensions.dart';
 
-class ProductSectionItem extends StatelessWidget {
+class ProductSectionItemMobile extends StatelessWidget {
   final ProductEntity product;
   final VoidCallback onProductClicked;
 
-  const ProductSectionItem(
+  const ProductSectionItemMobile(
       {super.key, required this.product, required this.onProductClicked});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: sectionProductItemWidth,
+      width: sectionProductItemWidthMobile,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -33,8 +33,8 @@ class ProductSectionItem extends StatelessWidget {
                       onTap: onProductClicked,
                       child: Image.asset(
                         "assets/images/best_seller_1.png",
-                        width: sectionProductItemWidth,
-                        height: sectionProductItemWidth,
+                        width: sectionProductItemWidthMobile,
+                        height: sectionProductItemWidthMobile,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -67,7 +67,7 @@ class ProductSectionItem extends StatelessWidget {
             SizedBox(height: 10),
             Text(
               product.name!,
-              style: sectionProductNameTextStyle,
+              style: sectionProductNameTextStyleMobile,
             ),
             Expanded(
               child: Stack(
@@ -77,7 +77,7 @@ class ProductSectionItem extends StatelessWidget {
                     left: 0,
                     child: Text(
                       "EGP ${product.price!}",
-                      style: sectionProductPriceTextStyle,
+                      style: sectionProductPriceTextStyleMobile,
                     ),
                   ),
                   Positioned(

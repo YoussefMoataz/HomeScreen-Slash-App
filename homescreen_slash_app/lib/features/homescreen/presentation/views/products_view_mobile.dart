@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/products/products_cubit.dart';
-import '../widgets/products_section.dart';
+import '../widgets/products_section_mobile.dart';
 
-class ProductsView extends StatelessWidget {
-  const ProductsView({super.key});
+class ProductsViewMobile extends StatelessWidget {
+  const ProductsViewMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,21 +14,21 @@ class ProductsView extends StatelessWidget {
         if (state is ProductsDone) {
           return Column(
             children: [
-              ProductsSection(
+              ProductsSectionMobile(
                 sectionName: "Best Selling",
                 products: state.productsListEntity!.bestSelling!,
                 onSeeAllClicked: () {
                   print("Best Selling: see all clicked");
                 },
               ),
-              ProductsSection(
+              ProductsSectionMobile(
                 sectionName: "New Arrival",
                 products: state.productsListEntity!.newArrival!,
                 onSeeAllClicked: () {
                   print("New Arrival: see all clicked");
                 },
               ),
-              ProductsSection(
+              ProductsSectionMobile(
                 sectionName: "Recommended For You",
                 products: state.productsListEntity!.recommendedForYou!,
                 onSeeAllClicked: () {

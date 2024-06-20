@@ -45,8 +45,8 @@ class _OffersState extends State<Offers> {
                     child: GestureDetector(
                       child: Image.asset(
                         item.imageUrl!,
-                        width: sectionProductItemWidth,
-                        height: sectionProductItemWidth,
+                        width: sectionProductItemWidthMobile,
+                        height: sectionProductItemWidthMobile,
                         fit: BoxFit.cover,
                       ),
                     ),

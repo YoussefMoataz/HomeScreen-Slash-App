@@ -4,7 +4,7 @@ import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
 import '../views/categories_view.dart';
 import '../views/offers_view.dart';
-import '../views/products_view.dart';
+import '../views/products_view_mobile.dart';
 import '../widgets/search_box.dart';
 import '../widgets/top_bar.dart';
 
@@ -88,7 +88,7 @@ class _ProductsPageMobileState extends State<ProductsPageMobile> {
             SearchBox(),
             OffersView(),
             CategoriesView(),
-            ProductsView(),
+            ProductsViewMobile(),
           ],
         ),
       ),

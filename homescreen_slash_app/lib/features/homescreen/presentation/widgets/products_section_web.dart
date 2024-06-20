@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:homescreen_slash_app/config/theme/dimensions.dart';
 import 'package:homescreen_slash_app/features/homescreen/domain/entities/product_entity.dart';
-import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/product_section_item.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/product_section_item_web.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/section_header.dart';
 
-class ProductsSection extends StatelessWidget {
+class ProductsSectionWeb extends StatelessWidget {
   final String sectionName;
   final List<ProductEntity> products;
   final VoidCallback onSeeAllClicked;
 
-  const ProductsSection(
+  const ProductsSectionWeb(
       {super.key,
       required this.sectionName,
       required this.products,
@@ -19,7 +19,8 @@ class ProductsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // color: Colors.grey,
-      height: 320,
+      // height: 520,
+      width: 300,
       child: Column(
         children: [
           SizedBox(
@@ -31,13 +32,15 @@ class ProductsSection extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Expanded(
-            child: ListView.builder(
+            child: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, childAspectRatio: 0.9),
+              shrinkWrap: true,
               padding: EdgeInsets.symmetric(
                   horizontal: defaultPadding - defaultListItemPadding),
-              scrollDirection: Axis.horizontal,
               itemCount: products.length,
               itemBuilder: (context, index) {
-                return ProductSectionItem(
+                return ProductSectionItemWeb(
                   product: products[index],
                   onProductClicked: () {
                     print(
