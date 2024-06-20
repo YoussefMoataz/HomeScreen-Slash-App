@@ -34,10 +34,32 @@ class ProductSectionItem extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  const Icon(CupertinoIcons.heart),
+                  Positioned(
+                    right: 5,
+                    top: 5,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: sectionSeeAllIconColor,
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      child: GestureDetector(
+                        onTap: () {
+                          print("add to cart clicked");
+                        },
+                        child: const Padding(
+                          padding: EdgeInsets.all(4.0),
+                          child: Icon(
+                            CupertinoIcons.heart,
+                            size: 20,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
+            SizedBox(height: 10),
             Text(
               product.name!,
               style: sectionProductNameTextStyle,

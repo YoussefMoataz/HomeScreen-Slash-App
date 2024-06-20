@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/views/categories_section.dart';
 
 import '../bloc/products_cubit.dart';
 import '../views/products_section.dart';
@@ -14,6 +15,13 @@ class ProductsPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              CategoriesSection(
+                sectionName: "Categories",
+                categories: [],
+                onSeeAllClicked: () {
+                  print("Categories: see all clicked");
+                },
+              ),
               BlocBuilder<ProductsCubit, ProductsState>(
                 builder: (context, state) {
                   if (state is ProductsDone) {
