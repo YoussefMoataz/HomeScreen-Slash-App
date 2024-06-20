@@ -33,7 +33,7 @@ class CategoriesSectionWeb extends StatelessWidget {
             child: GridView.builder(
               shrinkWrap: true,
               // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, childAspectRatio: 0.9),
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 200, childAspectRatio: 0.7, ),
+              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 300, childAspectRatio: 1.15, ),
               padding: EdgeInsets.symmetric(
                   horizontal: defaultPadding - defaultListItemPadding),
               itemCount: categories.length,

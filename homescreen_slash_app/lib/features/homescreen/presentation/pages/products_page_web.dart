@@ -35,7 +35,7 @@ class ProductsPageWeb extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Expanded(flex: 2, child: TopBar()),
+                      Expanded(child: TopBar()),
                     ],
                   ),
                   Expanded(
