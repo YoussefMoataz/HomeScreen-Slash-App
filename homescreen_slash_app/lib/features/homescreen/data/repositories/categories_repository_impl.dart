@@ -8,7 +8,8 @@ import '../../../../core/resources/data_state.dart';
 class CategoriesRepositoryImpl implements CategoriesRepository {
   late final CategoriesApiServiceRemote _categoriesApiServiceRemote;
 
-  CategoriesRepositoryImpl({CategoriesApiServiceRemote? productsApiServiceRemote}) {
+  CategoriesRepositoryImpl(
+      {CategoriesApiServiceRemote? productsApiServiceRemote}) {
     this._categoriesApiServiceRemote =
         productsApiServiceRemote ?? getIt.get<CategoriesApiServiceRemote>();
   }

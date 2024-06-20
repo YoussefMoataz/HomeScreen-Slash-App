@@ -11,11 +11,13 @@ class OffersView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<OffersCubit, OffersState>(
       builder: (context, state) {
-        if(state is OffersDone) {
-          return Offers(offers: state.offers!,);
-        }else if(state is OffersError){
+        if (state is OffersDone) {
+          return Offers(
+            offers: state.offers!,
+          );
+        } else if (state is OffersError) {
           return Text("failed to load offers");
-        }else{
+        } else {
           return CircularProgressIndicator();
         }
       },

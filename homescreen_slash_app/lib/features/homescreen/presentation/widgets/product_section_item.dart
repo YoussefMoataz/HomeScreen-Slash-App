@@ -9,7 +9,8 @@ class ProductSectionItem extends StatelessWidget {
   final ProductEntity product;
   final VoidCallback onProductClicked;
 
-  const ProductSectionItem({super.key, required this.product, required this.onProductClicked});
+  const ProductSectionItem(
+      {super.key, required this.product, required this.onProductClicked});
 
   @override
   Widget build(BuildContext context) {
