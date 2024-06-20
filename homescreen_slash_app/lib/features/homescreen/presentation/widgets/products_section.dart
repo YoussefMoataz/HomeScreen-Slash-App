@@ -31,6 +31,7 @@ class ProductsSection extends StatelessWidget {
           SizedBox(height: 20),
           Expanded(
             child: ListView.builder(
+              padding: EdgeInsets.symmetric(horizontal: 10),
               scrollDirection: Axis.horizontal,
               itemCount: products.length,
               itemBuilder: (context, index) {

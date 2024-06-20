@@ -18,7 +18,7 @@ class SectionHeader extends StatelessWidget {
       children: [
         Positioned(
           top: 10,
-          left: 10,
+          left: 18,
           child: Text(
             sectionName,
             style: sectionNameTextStyle,
@@ -26,7 +26,7 @@ class SectionHeader extends StatelessWidget {
         ),
         Positioned(
           top: 14,
-          right: 10,
+          right: 18,
           child: Row(
             children: [
               const Text(
