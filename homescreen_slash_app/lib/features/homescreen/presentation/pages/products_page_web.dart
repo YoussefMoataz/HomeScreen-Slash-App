@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:homescreen_slash_app/config/theme/colors.dart';
-import 'package:homescreen_slash_app/features/homescreen/presentation/views/categories_view_web.dart';
+import 'package:homescreen_slash_app/core/utils/display_types.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/views/categories_view.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/views/offers_view.dart';
-import 'package:homescreen_slash_app/features/homescreen/presentation/views/products_view_web.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/views/products_view.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/search_box.dart';
 import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/top_bar.dart';
 
@@ -81,7 +82,9 @@ class _ProductsPageWebState extends State<ProductsPageWeb> {
                         children: [
                           SearchBox(),
                           OffersView(),
-                          CategoriesViewWeb(),
+                          CategoriesView(
+                            displayType: DisplayTypes.web,
+                          ),
                         ],
                       ),
                     ),
@@ -89,7 +92,7 @@ class _ProductsPageWebState extends State<ProductsPageWeb> {
                         flex: 3,
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 8),
-                          child: ProductsViewWeb(),
+                          child: ProductsView(displayType: DisplayTypes.web),
                         )),
                   ],
                 ),

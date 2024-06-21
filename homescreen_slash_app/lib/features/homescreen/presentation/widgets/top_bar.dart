@@ -27,7 +27,10 @@ class TopBar extends StatelessWidget {
               Column(
                 children: [
                   Text("Nasr City"),
-                  Text("Cairo", style: TextStyle(fontWeight: FontWeight.w600),),
+                  Text(
+                    "Cairo",
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                 ],
               ),
               IconButton(

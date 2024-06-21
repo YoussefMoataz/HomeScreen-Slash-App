@@ -1,0 +1,4 @@
+enum DisplayTypes{
+ mobile,
+ web,
+}

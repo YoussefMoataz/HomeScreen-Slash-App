@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:homescreen_slash_app/core/utils/display_types.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/views/categories_view.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/views/products_view.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
-import '../views/categories_view_mobile.dart';
 import '../views/offers_view.dart';
-import '../views/products_view_mobile.dart';
 import '../widgets/search_box.dart';
 import '../widgets/top_bar.dart';
 
@@ -87,8 +88,8 @@ class _ProductsPageMobileState extends State<ProductsPageMobile> {
             TopBar(),
             SearchBox(),
             OffersView(),
-            CategoriesViewMobile(),
-            ProductsViewMobile(),
+            CategoriesView(displayType: DisplayTypes.mobile),
+            ProductsView(displayType: DisplayTypes.mobile),
           ],
         ),
       ),

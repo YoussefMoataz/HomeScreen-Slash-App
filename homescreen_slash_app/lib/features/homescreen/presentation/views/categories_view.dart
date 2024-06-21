@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:homescreen_slash_app/features/homescreen/presentation/widgets/categories_section.dart';
 
+import '../../../../core/utils/display_types.dart';
 import '../bloc/categories/categories_cubit.dart';
-import '../widgets/categories_section_mobile.dart';
 
-class CategoriesViewMobile extends StatelessWidget {
-  const CategoriesViewMobile({super.key});
+class CategoriesView extends StatelessWidget {
+  final DisplayTypes displayType;
+
+  const CategoriesView({
+    super.key,
+    required this.displayType,
+  });
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<CategoriesCubit, CategoriesState>(
       builder: (context, state) {
         if (state is CategoriesDone) {
-          return CategoriesSectionMobile(
+          return CategoriesSection(
+            displayType: displayType,
             sectionName: "Categories",
             categories: state.categories!,
             onSeeAllClicked: () {
