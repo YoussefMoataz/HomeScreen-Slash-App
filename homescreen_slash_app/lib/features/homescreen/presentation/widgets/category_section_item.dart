@@ -25,12 +25,12 @@ class CategorySectionItem extends StatelessWidget {
                 print("Category: ${category.name} clicked");
               },
               child: Padding(
-                padding: EdgeInsets.all(4.0),
+                padding: const EdgeInsets.all(4.0),
                 child: Image.asset(category.imageUrl!),
               ),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(category.name!),
         ],
       ),

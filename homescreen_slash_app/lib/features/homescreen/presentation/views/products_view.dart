@@ -52,9 +52,9 @@ class ProductsView extends StatelessWidget {
             ],
           );
         } else if (state is ProductsError) {
-          return Text("Failed to load data");
+          return const Text("Failed to load data");
         } else {
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         }
       },
     );
@@ -99,9 +99,9 @@ class ProductsView extends StatelessWidget {
             ],
           );
         } else if (state is ProductsError) {
-          return Text("Failed to load data");
+          return const Text("Failed to load data");
         } else {
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         }
       },
     );

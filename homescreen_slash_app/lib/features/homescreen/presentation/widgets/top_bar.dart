@@ -14,17 +14,17 @@ class TopBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
+          const Text(
             "Slash.",
             style: appBarTitleTextStyle,
           ),
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.location_on_rounded,
                 size: 30,
               ),
-              Column(
+              const Column(
                 children: [
                   Text("Nasr City"),
                   Text(
@@ -37,7 +37,7 @@ class TopBar extends StatelessWidget {
                 onPressed: () {
                   print("loaction clicked");
                 },
-                icon: Icon(
+                icon: const Icon(
                   CupertinoIcons.chevron_down,
                   size: 30,
                 ),

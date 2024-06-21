@@ -77,7 +77,7 @@ class ProductSectionItem extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               product.name!,
               style: sectionProductNameTextStyleMobile,
@@ -196,7 +196,7 @@ class ProductSectionItem extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               product.name!,
               style: sectionProductNameTextStyleWeb,

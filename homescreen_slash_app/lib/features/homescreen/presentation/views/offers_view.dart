@@ -16,9 +16,9 @@ class OffersView extends StatelessWidget {
             offers: state.offers!,
           );
         } else if (state is OffersError) {
-          return Text("failed to load offers");
+          return const Text("failed to load offers");
         } else {
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         }
       },
     );

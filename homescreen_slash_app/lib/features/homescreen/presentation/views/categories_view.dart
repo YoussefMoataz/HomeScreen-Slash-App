@@ -27,9 +27,9 @@ class CategoriesView extends StatelessWidget {
             },
           );
         } else if (state is CategoriesDone) {
-          return Text("Failed to load data");
+          return const Text("Failed to load data");
         } else {
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         }
       },
     );

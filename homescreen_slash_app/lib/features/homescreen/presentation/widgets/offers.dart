@@ -54,7 +54,7 @@ class _OffersState extends State<Offers> {
                 )
                 .toList(),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: widget.offers.asMap().entries.map((entry) {
@@ -75,9 +75,9 @@ class _OffersState extends State<Offers> {
               return Container(
                 width: _current == entry.key ? 12 : 8,
                 height: 8,
-                margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 1.5),
+                margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 1.5),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
                     color: (Theme.of(context).brightness == Brightness.dark
                             ? Colors.white
                             : Colors.black)

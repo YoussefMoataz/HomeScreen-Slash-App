@@ -67,7 +67,7 @@ class ProductSection extends StatelessWidget {
   }
 
   Widget _buildWebLayout() {
-    return Container(
+    return SizedBox(
       // color: Colors.grey,
       // height: 520,
       width: 300,
