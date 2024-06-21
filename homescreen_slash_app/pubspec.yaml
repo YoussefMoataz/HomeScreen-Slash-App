@@ -96,3 +96,17 @@ flutter:
   assets:
     - assets/data/dummyData.json
     - assets/images/best_seller_1.png
+    - assets/images/best_seller_2.png
+    - assets/images/best_seller_3.png
+    - assets/images/best_seller_4.png
+    - assets/images/best_seller_5.png
+    - assets/images/new_arrival_1.png
+    - assets/images/new_arrival_2.png
+    - assets/images/new_arrival_3.png
+    - assets/images/new_arrival_4.png
+    - assets/images/new_arrival_5.png
+    - assets/images/recommended_1.png
+    - assets/images/recommended_2.png
+    - assets/images/recommended_3.png
+    - assets/images/recommended_4.png
+    - assets/images/recommended_5.png

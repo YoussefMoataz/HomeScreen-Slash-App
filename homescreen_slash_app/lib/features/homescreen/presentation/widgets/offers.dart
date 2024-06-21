@@ -73,11 +73,11 @@ class _OffersState extends State<Offers> {
               //   ),
               // );
               return Container(
-                width: 8,
+                width: _current == entry.key ? 12 : 8,
                 height: 8,
-                margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+                margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 1.5),
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
                     color: (Theme.of(context).brightness == Brightness.dark
                             ? Colors.white
                             : Colors.black)
