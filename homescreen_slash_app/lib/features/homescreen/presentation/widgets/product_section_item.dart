@@ -45,7 +45,7 @@ class ProductSectionItem extends StatelessWidget {
                     child: GestureDetector(
                       onTap: onProductClicked,
                       child: Image.asset(
-                        "assets/images/best_seller_1.png",
+                        product.imageUrl!,
                         width: sectionProductItemWidthMobile,
                         height: sectionProductItemWidthMobile,
                         fit: BoxFit.cover,
