@@ -6,17 +6,29 @@ class CategoriesApiServiceRemoteImpl implements CategoriesApiServiceRemote {
   Future<List<CategoryModel>?> getCategories() async {
     List<CategoryModel> categories = List.of([
       CategoryModel(
-          id: 0, name: "Fashion", imageUrl: "assets/images/best_seller_1.png"),
+        id: 0,
+        name: "Fashion",
+        imageUrl: "assets/images/best_seller_1.png",
+      ),
       CategoryModel(
-          id: 1, name: "Games", imageUrl: "assets/images/best_seller_1.png"),
+        id: 1,
+        name: "Games",
+        imageUrl: "assets/images/best_seller_2.png",
+      ),
       CategoryModel(
           id: 2,
           name: "Accessories",
-          imageUrl: "assets/images/best_seller_1.png"),
+          imageUrl: "assets/images/recommended_1.png"),
       CategoryModel(
-          id: 3, name: "Books", imageUrl: "assets/images/best_seller_1.png"),
+        id: 3,
+        name: "Books",
+        imageUrl: "assets/images/best_seller_1.png",
+      ),
       CategoryModel(
-          id: 4, name: "Artistic", imageUrl: "assets/images/best_seller_1.png"),
+        id: 4,
+        name: "Artistic",
+        imageUrl: "assets/images/best_seller_1.png",
+      ),
     ]);
     return categories;
   }
